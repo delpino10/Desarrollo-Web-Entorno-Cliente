@@ -17,7 +17,15 @@
 
             let imagen = document.getElementById('imagen');
             if(imagen.src.match('1')){
-    imagen.src = "img/2.PNG";
+                imagen.src = "img/2.PNG";    
+            }else{
+                imagen.src = "img/1.PNG";
+            }
+
+            if(imagen.src.match('2')){
+                imagen.src = "img/3.PNG";    
+            }else{
+                imagen.src = "img/2.PNG";
             }
         }
     </script>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <h1>Verdadero o Falso</h1>
+    <ol>
+        <li>
+            <!-- /Verdadero -->
+            <p id="p1">El azúcar es dulce</p> 
+            <button onclick="correctoV(1); ">Verdadero</button>
+            <button onclick="incorrectoV(1); ">Falso</button>
+        </li>
+
+        <li>
+            <!-- /Verdadero -->
+        <p id="p2">La sal es salada</p>
+        <button onclick="correctoV(2);">Verdadero</button>
+        <button onclick="incorrectoV(2);">Falso</button>
+        </li>
+
+        <li>
+            <!-- Falso -->
+        <p id="p3">El agua no moja</p>
+        <button onclick="incorrectoF(3);">Verdadero</button>
+        <button onclick="correctoF(3);">Falso</button>
+        </li>
+
+        <li>
+            <!-- /Verdadero -->
+        <p id="p4">La tecla R está al lado de la tecla E</p>
+        <button onclick="correctoV(4);">Verdadero</button>
+        <button onclick="incorrectoV(4);">Falso</button>
+        </li>
+
+        <li>
+            <!-- Falso -->
+        <p id="p5">La tierra es plana</p>
+        <button onclick="incorrectoF(5);">Verdadero</button>
+        <button onclick="correctoF(5);">Falso</button>
+        </li>
+
+        <li>
+            <!-- /Verdadero -->
+        <p id="p6">El color blanco significa pureza</p>
+        <button onclick="correctoV(6);">Verdadero</button>
+        <button onclick="incorrectoV(6);">Falso</button>
+        </li>
+
+        <li>
+            <!-- /Verdadero -->
+        <p id="p7">La prueba del algodón no engaña</p>
+        <button onclick="correctoV(7);">Verdadero</button>
+        <button onclick="incorrectoV(7);">Falso</button>
+        </li>
+    </ol>
+    
+
+    <script>
+        //Cuando la respuesta es verdadera
+        function correctoV(n){
+        //Accedemos al nodo mediante el Id
+        let x = document.getElementById('p' + n);
+        //Cambiamos el color a verde
+        x.style.color = "green";
+        //Agregamos texto
+        var nuevoTexto = document.createTextNode(" => Verdadero!");
+        x.appendChild(nuevoTexto);
+        }
+
+        //Correcto cuando la respuesta es verdadera
+        function incorrectoV(n){
+        //Accedemos al nodo mediante el Id
+        let x = document.getElementById('p' + n);
+        //Cambiamos el color a verde
+        x.style.color = "red";
+        //Agregamos texto
+        var nuevoTexto = document.createTextNode(" => Error! es Verdadero");
+        x.appendChild(nuevoTexto);
+        }
+
+        //Cuando la respuesta es falsa
+        function correctoF(n){
+            let x = document.getElementById("p"+ n);
+            x.style.color = "green";
+            let nuevoTexto = document.createTextNode(" => Correcto! es Falso");
+            x.appendChild(nuevoTexto);
+        }
+
+        function incorrectoF(n){
+            let x = document.getElementById("p"+ n);
+            x.style.color = "red";
+            let nuevoTexto = document.createTextNode(" => Error! es Verdadero");
+            x.appendChild(nuevoTexto);
+        }
+
+    </script>
+    
+</body>
+</html>
