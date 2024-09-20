@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje Bievenida Distintos Idiomas</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .btn{
+            padding: 50px;
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Elije tu mensaje de Bienvenida</h1>
+    <div class="btn">
+        <button type="button" id="ruso">Ruso</button>
+        <button  
+            type="button" 
+            id="es" 
+            onclick="es()">Español</button>
+        <button type="button" id="en">Inglés</button>
+    </div>
+    <p id="p">p</p>
+    
+    <script>
+        function es(){
+            // let x = document.getElementById('es');
+            let y = document.getElementById('p');
+            y.innerHTML("hola");
+        }
+    </script>
+</body>
+</html>
