@@ -28,15 +28,16 @@ const nextButton = document.getElementById("next-frame");
 
 // Función que cambia la imagen al siguiente fotograma
 function changeFrame() {
-  currentFrame++;
-
-  // Reiniciar el contador si llega al final de la secuencia
-  if (currentFrame >= frames.length) {
-    currentFrame = 0;
-  }
-
-  // Cambiar la fuente de la imagen al siguiente fotograma
-  imgElement.src = frames[currentFrame];
+    
+    // Reiniciar el contador si llega al final de la secuencia
+    if (currentFrame >= frames.length) {
+        currentFrame = 0;
+    }
+    
+    // Cambiar la fuente de la imagen al siguiente fotograma
+    imgElement.src = frames[currentFrame];
+    
+    currentFrame++;
 }
 
 // Asignar el evento click al botón para cambiar la imagen
