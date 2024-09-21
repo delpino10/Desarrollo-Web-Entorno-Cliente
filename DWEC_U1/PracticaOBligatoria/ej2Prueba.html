@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secuencia de Imágenes</title>
+  <style>
+    #image-sequence {
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img id="image-sequence" src="img/1.PNG" alt="Secuencia de Imágenes">
+    <br>
+    <button id="next-frame">Siguiente Fotograma</button>
+  </div>
+
+  <script >
+    // Definir un array con las rutas de las imágenes (fotogramas)
+const frames = ["img/1.PNG", "img/2.PNG", "img/3.PNG", "img/4.PNG"];
+let currentFrame = 0;
+
+// Obtener la referencia al elemento <img> y al botón
+const imgElement = document.getElementById("image-sequence");
+const nextButton = document.getElementById("next-frame");
+
+// Función que cambia la imagen al siguiente fotograma
+function changeFrame() {
+  currentFrame++;
+
+  // Reiniciar el contador si llega al final de la secuencia
+  if (currentFrame >= frames.length) {
+    currentFrame = 0;
+  }
+
+  // Cambiar la fuente de la imagen al siguiente fotograma
+  imgElement.src = frames[currentFrame];
+}
+
+// Asignar el evento click al botón para cambiar la imagen
+nextButton.addEventListener("click", changeFrame);
+
+  </script>
+</body>
+</html>
