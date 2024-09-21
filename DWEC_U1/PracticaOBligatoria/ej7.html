@@ -16,7 +16,7 @@
 
         .btn{
             padding: 50px;
-            width: 60%;
+            width: 50%;
             display: flex;
             justify-content: space-between;
         }
@@ -25,8 +25,9 @@
 </head>
 <body>
     <h1>Elije tu mensaje de Bienvenida</h1>
+    <h4>Aparecerá una alerta</h4>
     <div class="btn">
-            <button 
+        <button 
             type="button" 
             id="ruso"
             onclick="ruso()"
@@ -45,28 +46,21 @@
             id="en"
             onclick="en()"
             >Inglés
-    </button>
+         </button>
     </div>
     <p id="p"></p>
     
     <script>
         function es(){
-            // let x = document.getElementById('es');
-            let y = document.getElementById('p');
-            y.innerHTML="Bienvenido";
-            y.style.color="red";
+            console.log("Bienvenido");
         }
 
         function en(){
-            let x = document.getElementById('p');
-            x.innerHTML="Welcome";
-            x.style.color="green";
+            console.log("Welcome");
         }
 
         function ruso(){
-            let x = document.getElementById('p');
-            x.innerHTML="добро пожаловать";
-            x.style.color="orange";
+            console.log("добро пожаловать");
         }
     </script>
 </body>
