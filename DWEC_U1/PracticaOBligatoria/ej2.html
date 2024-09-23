@@ -7,8 +7,9 @@
 </head>
 <body>
     <h1>Cambia las imágenes con javaScript</h1>
+    <p>Haz clic sobre la imagen para pasa a la siguiente </p>
 
-    <!-- Cuando el usuario haga clic sobre la imagen, la imagen cambiará -->
+    <!-- Cuando el usuario haga clic sobre la imagen, la imagen cambiará a la siguiente -->
     <img src="img/1.PNG" alt="" id="imagen"
     width="400px"
     onclick="cambiaImagen()">
@@ -37,7 +38,7 @@
            // correspondiente a su lugar en el Array 
            x.src = imagenes[indice];
 
-           // incremento del índice
+           // incremento del índice para pasar a la siguiente imagen
            indice++;
 
         }
