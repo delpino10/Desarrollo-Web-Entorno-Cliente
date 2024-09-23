@@ -13,16 +13,30 @@
     onclick="cambiaImagen()">
     
     <script>
+            //alojamos el nodo imagen en x
+            let x = document.getElementById('imagen');
+
+            // Indice para recorrer el array
+            let indice = 0;
+
+            // Array para alojar las imágenes
+           const imagenes = [
+            'img/1.PNG',
+            'img/2.PNG',
+            'img/3.PNG',
+            'img/4.PNG'
+           ];
         function cambiaImagen(){
 
-            let imagen = document.getElementById('imagen');
-            if(imagen.src.match('1')){
-                imagen.src = "img/2.PNG";    
-            }else{
-                imagen.src = "img/1.PNG";
-            }
+            // Si el indice supera el valor del tamaño del array, ponerlo a 0
+           if(indice >= imagenes.length){
+            indice = 0;
+           }
 
-           
+           x.src = imagenes[indice];
+
+           indice++;
+
         }
     </script>
 </body>
