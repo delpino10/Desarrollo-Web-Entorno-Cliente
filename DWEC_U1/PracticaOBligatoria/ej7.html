@@ -27,6 +27,7 @@
     <h1>Elije tu mensaje de Bienvenida</h1>
     <h4>Aparecerá una alerta</h4>
     <div class="btn">
+        <!-- 3 botones donde cada uno lanza un mensaje en consola en el idioma elegido -->
         <button 
             type="button" 
             id="ruso"
@@ -48,17 +49,17 @@
             >Inglés
          </button>
     </div>
-    <p id="p"></p>
     
     <script>
+        // Si el usuario hace clic, en la consola aparece un mensaje de bienvenida en español
         function es(){
             console.log("Bienvenido");
         }
-
+        // Si el usuario hace clic, en la consola aparece un mensaje de bienvenida en inglés
         function en(){
             console.log("Welcome");
         }
-
+        // Si el usuario hace clic, en la consola aparece un mensaje de bienvenida en ruso
         function ruso(){
             console.log("добро пожаловать");
         }

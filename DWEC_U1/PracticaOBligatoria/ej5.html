@@ -26,11 +26,12 @@
 <body>
     <h1>Elije tu mensaje de Bienvenida</h1>
     <div class="btn">
-            <button 
+    <!-- 3 botones donde cada uno hace aparecer un mensaje (párrafo) en el idioma elegido -->
+        <button 
             type="button" 
             id="ruso"
             onclick="ruso()"
-            >Ruso
+            >Русский
         </button>
 
         <button  
@@ -47,26 +48,37 @@
             >Inglés
     </button>
     </div>
+    <!-- etiqueta p vacía para luego rellenar con texto según el idioma elegido-->
     <p id="p"></p>
     
     <script>
+        // Muestra el mensaje de bienvenida en Español
         function es(){
-            // let x = document.getElementById('es');
+            // Accedemos al nodo mediante el identificador de la etiqueta <p> vacía
             let y = document.getElementById('p');
+            // Actualizamos el texto con el texto en español
             y.innerHTML="Bienvenido";
-            y.style.color="red";
+            // cambiamos el atributo de color
+            y.style.color="orangered";
         }
-
+        // Muestra el mensaje de bienvenida en Inglés
         function en(){
+            // Accedemos al nodo mediante el identificador de la etiqueta <p> vacía
             let x = document.getElementById('p');
+            // Actualizamos el texto con el texto en Inglés
             x.innerHTML="Welcome";
-            x.style.color="green";
+            // cambiamos el atributo de color
+            x.style.color="blue";
         }
-
+        // Muestra el mensaje de bienvenida en Ruso
         function ruso(){
+            
+            // Accedemos al nodo mediante el identificador de la etiqueta <p> vacía
             let x = document.getElementById('p');
+            // Actualizamos el texto con el texto en Ruso
             x.innerHTML="добро пожаловать";
-            x.style.color="orange";
+            // cambiamos el atributo de color
+            x.style.color="magenta";
         }
     </script>
 </body>

@@ -27,11 +27,12 @@
     <h1>Elije tu mensaje de Bienvenida</h1>
     <h4>Aparecerá una alerta</h4>
     <div class="btn">
+        <!-- 3 botones donde cada uno lanza una alerta en el idioma elegido -->
         <button 
             type="button" 
             id="ruso"
             onclick="ruso()"
-            >Ruso
+            >Русский
         </button>
 
         <button  
@@ -48,17 +49,17 @@
             >Inglés
          </button>
     </div>
-    <p id="p"></p>
     
     <script>
+        // Si el usuario hace clic, salta la alerta en español
         function es(){
             alert("Bienvenido");
         }
-
+        // Si el usuario hace clic, salta la alerta en inglés
         function en(){
             alert("Welcome");
         }
-
+        // Si el usuario hace clic, salta la alerta en ruso
         function ruso(){
             alert("добро пожаловать");
         }

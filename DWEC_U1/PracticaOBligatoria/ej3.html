@@ -10,58 +10,60 @@
     <h1>Verdadero o Falso</h1>
     <ol>
         <li>
-            <!-- /Verdadero -->
+            <!-- La respuesta es Verdadera -->
             <p id="p1">El azúcar es dulce</p> 
             <button onclick="correctoV(1); ">Verdadero</button>
             <button onclick="incorrectoV(1); ">Falso</button>
         </li>
 
         <li>
-            <!-- /Verdadero -->
-        <p id="p2">La sal es salada</p>
-        <button onclick="correctoV(2);">Verdadero</button>
-        <button onclick="incorrectoV(2);">Falso</button>
+            <!-- La respuesta es Verdadera -->
+            <p id="p2">La sal es salada</p>
+            <button onclick="correctoV(2);">Verdadero</button>
+            <button onclick="incorrectoV(2);">Falso</button>
         </li>
 
         <li>
-            <!-- Falso -->
-        <p id="p3">El agua no moja</p>
-        <button onclick="incorrectoF(3);">Verdadero</button>
-        <button onclick="correctoF(3);">Falso</button>
+            <!-- La respuesta es Falsa -->
+            <p id="p3">El agua no moja</p>
+            <button onclick="incorrectoF(3);">Verdadero</button>
+            <button onclick="correctoF(3);">Falso</button>
         </li>
 
         <li>
-            <!-- /Verdadero -->
-        <p id="p4">La tecla R está al lado de la tecla E</p>
-        <button onclick="correctoV(4);">Verdadero</button>
-        <button onclick="incorrectoV(4);">Falso</button>
+            <!-- La respuesta es Verdadera -->
+            <p id="p4">La tecla R está al lado de la tecla E</p>
+            <button onclick="correctoV(4);">Verdadero</button>
+            <button onclick="incorrectoV(4);">Falso</button>
         </li>
 
         <li>
-            <!-- Falso -->
-        <p id="p5">La tierra es plana</p>
-        <button onclick="incorrectoF(5);">Verdadero</button>
-        <button onclick="correctoF(5);">Falso</button>
+            <!-- La respuesta es Falsa -->
+            <p id="p5">La tierra es plana</p>
+            <button onclick="incorrectoF(5);">Verdadero</button>
+            <button onclick="correctoF(5);">Falso</button>
         </li>
 
         <li>
-            <!-- /Verdadero -->
-        <p id="p6">El color blanco significa pureza</p>
-        <button onclick="correctoV(6);">Verdadero</button>
-        <button onclick="incorrectoV(6);">Falso</button>
+            <!-- La respuesta es Verdadera -->
+            <p id="p6">El color blanco significa pureza</p>
+            <button onclick="correctoV(6);">Verdadero</button>
+            <button onclick="incorrectoV(6);">Falso</button>
         </li>
 
         <li>
-            <!-- /Verdadero -->
-        <p id="p7">La prueba del algodón no engaña</p>
-        <button onclick="correctoV(7);">Verdadero</button>
-        <button onclick="incorrectoV(7);">Falso</button>
+            <!-- La respuesta es Verdadera -->
+            <p id="p7">La prueba del algodón no engaña</p>
+            <button onclick="correctoV(7);">Verdadero</button>
+            <button onclick="incorrectoV(7);">Falso</button>
         </li>
     </ol>
     
 
     <script>
         //Cuando la respuesta es verdadera
+
+        //Función para mostrar un acierto cuando la cuestión es verdadera
         function correctoV(n){
         //Accedemos al nodo mediante el Id
         let x = document.getElementById('p' + n);
@@ -72,7 +74,7 @@
         x.appendChild(nuevoTexto);
         }
 
-        //Correcto cuando la respuesta es verdadera
+        //Función para mostrar un error cuando la cuestión es verdadera
         function incorrectoV(n){
         //Accedemos al nodo mediante el Id
         let x = document.getElementById('p' + n);
@@ -80,21 +82,33 @@
         x.style.color = "red";
         //Agregamos texto
         var nuevoTexto = document.createTextNode(" => Error! es Verdadero");
+        //añadimos el texto anterior al nodo
         x.appendChild(nuevoTexto);
         }
 
         //Cuando la respuesta es falsa
+
+        //Función para mostrar un acierto cuando la cuestión es falsa
         function correctoF(n){
+            //Accedemos al nodo mediante el Id
             let x = document.getElementById("p"+ n);
+            //Cambiamos el color a rojo
             x.style.color = "green";
+            //Agregamos texto
             let nuevoTexto = document.createTextNode(" => Correcto! es Falso");
+            //añadimos el texto anterior al nodo
             x.appendChild(nuevoTexto);
         }
 
+        //Función para mostrar un error cuando la cuestión es falsa
         function incorrectoF(n){
+            //Accedemos al nodo mediante el Id
             let x = document.getElementById("p"+ n);
+            //Cambiamos el color a rojo
             x.style.color = "red";
+            //Agregamos texto
             let nuevoTexto = document.createTextNode(" => Error! es Verdadero");
+            //añadimos el texto anterior al nodo
             x.appendChild(nuevoTexto);
         }
 

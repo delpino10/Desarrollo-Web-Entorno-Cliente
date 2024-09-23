@@ -8,12 +8,13 @@
 <body>
     <h1>Cambia las imágenes con javaScript</h1>
 
+    <!-- Cuando el usuario haga clic sobre la imagen, la imagen cambiará -->
     <img src="img/1.PNG" alt="" id="imagen"
     width="400px"
     onclick="cambiaImagen()">
     
     <script>
-            //alojamos el nodo imagen en x
+            //alojamos el nodo con identificar 'imagen' en la variable x
             let x = document.getElementById('imagen');
 
             // Indice para recorrer el array
@@ -32,9 +33,11 @@
            if(indice >= imagenes.length){
             indice = 0;
            }
-
+           // Mostramos en la etiqueta html la imagen 
+           // correspondiente a su lugar en el Array 
            x.src = imagenes[indice];
 
+           // incremento del índice
            indice++;
 
         }
