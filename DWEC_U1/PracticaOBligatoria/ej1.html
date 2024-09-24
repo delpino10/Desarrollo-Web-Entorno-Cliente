@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="css/estilos.css"> -->
 </head>
 <body>
     
@@ -16,22 +15,21 @@
 <!-- Cambia el párrafo pulsando el botón -->
     <button type="button" onclick="cambiaParrafo()">DALE! Cambia el párrafo</button>
 
-    <script>
-        
-        function cambiaTitulo(){
-        // coge el id 'titulo' de la etiqueta h1
-            let t = document.getElementById('titulo');
-        // Cambia el contenido del título   
-            t.innerHTML = "MODIFICANDO el Contenido";
-        }
+<script>
+    function cambiaTitulo(){
+    // coge el id 'titulo' de la etiqueta h1
+        let t = document.getElementById('titulo');
+    // Cambia el contenido del título   
+        t.innerHTML = "MODIFICANDO el Contenido";
+    }
 
-        function cambiaParrafo(){
-            // coge el id 'parrafo' de la etiqueta p
-            let p = document.getElementById('parrafo');
-            // Cambia el contenido del párrafo 
-            p.innerHTML = "CAMBIANDO el Contenido";
-        }
-    </script>
+    function cambiaParrafo(){
+        // coge el id 'parrafo' de la etiqueta p
+        let p = document.getElementById('parrafo');
+        // Cambia el contenido del párrafo 
+        p.innerHTML = "CAMBIANDO el Contenido";
+    }
+</script>
 
 </body>
 </html>
