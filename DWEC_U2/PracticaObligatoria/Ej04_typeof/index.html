@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>typeof</title>
+</head>
+<body>
+
+    <h2>Tipado de datos</h2>
+
+    <h3>Introduce el dato para saber su tipo</h3>
+
+    <input type="text" id="dato">
+
+    <input type="button" value="Consultar" id="btn">
+
+    <p id="resultado"></p>
+
+    <script>
+        var dato = document.getElementById('dato').value;
+        var btn = document.getElementById('btn');
+        var resultado = document.getElementById('resultado');
+
+        btn.addEventListener('click', (dato) => {
+            var nuevoTexto = document.createTextNode(typeof dato);
+            resultado.appendChild(nuevoTexto);
+        })
+
+    </script>
+    
+</body>
+</html>
