@@ -1,15 +1,42 @@
-// const newELe = document.createElement("p");
-// function rombo(){
-//     let n = 5; // altura del rombo
-//     for (let i = 0; i < n; i++) {
-//         var espacios = ' '.repeat(n + 1);
-//         var asteriscos = '*'.repeat(n);     
-//         console.log(espacios + asteriscos);
-//     }
-// }
+function dibujarRombo(n) {
+  let resultado = '';
 
-function hola(){
-    let h = "hola";
-   return h;
+  // Parte superior del rombo
+  for (let i = 0; i < n; i++) {
+      let linea = '';
+  
+      // Añadir espacios usando &nbsp;
+      for (let j = 0; j < n - i - 1; j++) {
+          linea += '&nbsp;';
+      }
+  
+      // Añadir asteriscos
+      for (let k = 0; k < 2 * i + 1; k++) {
+          linea += '*';
+      }
+  
+      resultado += linea + '<br>';
+  }
+
+  // Parte inferior del rombo
+  for (let i = n - 2; i >= 0; i--) {
+      let linea = '';
+  
+      // Añadir espacios usando &nbsp;
+      for (let j = 0; j < n - i - 1; j++) {
+          linea += '&nbsp;';
+      }
+  
+      // Añadir asteriscos
+      for (let k = 0; k < 2 * i + 1; k++) {
+          linea += '*';
+      }
+  
+      resultado += linea + '<br>';
+  }
+
+  document.body.innerHTML = resultado; // Mostrar el rombo en la página
 }
-console.log(hola());
+
+// Llamada a la función para crear un rombo de tamaño 4
+dibujarRombo(4);
