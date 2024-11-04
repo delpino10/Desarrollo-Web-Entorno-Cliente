@@ -7,7 +7,7 @@ function dibujarRombo(n) {
   
       // Añadir espacios usando &nbsp;
       for (let j = 0; j < n - i - 1; j++) {
-          linea += '&nbsp;';
+          linea += ' &nbsp;';
       }
   
       // Añadir asteriscos
@@ -24,7 +24,7 @@ function dibujarRombo(n) {
   
       // Añadir espacios usando &nbsp;
       for (let j = 0; j < n - i - 1; j++) {
-          linea += '&nbsp;';
+          linea += ' &nbsp;';
       }
   
       // Añadir asteriscos
