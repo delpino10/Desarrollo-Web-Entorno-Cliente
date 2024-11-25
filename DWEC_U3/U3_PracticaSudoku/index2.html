@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudoku Interactivo</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin: 20px auto;
+    }
+    td {
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid #000;
+      font-size: 20px;
+    }
+    input {
+      width: 100%;
+      height: 100%;
+      font-size: 20px;
+      text-align: center;
+      border: none;
+      outline: none;
+    }
+    .sudoku-board {
+      margin-top: 20px;
+    }
+    .input-cell {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+<h2 style="text-align: center;">Sudoku Interactivo</h2>
+<div class="sudoku-board" id="sudoku-board"></div>
+<br>
+<button onclick="verificarSudoku()">Verificar Sudoku</button>
+
+<script>
+  // Tablero de Sudoku predefinido (con algunos valores vacíos)
+  const tableroInicial = [
+    [5, 3, 0, 0, 7, 0, 0, 0, 0],
+    [6, 0, 0, 1, 9, 5, 0, 0, 0],
+    [0, 9, 8, 0, 0, 0, 0, 6, 0],
+    [8, 0, 0, 0, 6, 0, 0, 0, 3],
+    [4, 0, 0, 8, 0, 3, 0, 0, 1],
+    [7, 0, 0, 0, 2, 0, 0, 0, 6],
+    [0, 6, 0, 0, 0, 0, 2, 8, 0],
+    [0, 0, 0, 4, 1, 9, 0, 0, 5],
+    [0, 0, 0, 0, 8, 0, 0, 7, 9]
+  ];
+
+  // Función para mostrar el tablero con inputs
+  function mostrarSudoku(tablero) {
+    let html = '<table>';
+    for (let fila = 0; fila < 9; fila++) {
+      html += '<tr>';
+      for (let col = 0; col < 9; col++) {
+        let valor = tablero[fila][col] !== 0 ? tablero[fila][col] : '';
+        let inputClass = tablero[fila][col] !== 0 ? '' : 'input-cell';
+        html += `<td><input type="text" class="${inputClass}" value="${valor}" maxlength="1" oninput="validarEntrada(this, ${fila}, ${col})" /></td>`;
+      }
+      html += '</tr>';
+    }
+    html += '</table>';
+    document.getElementById('sudoku-board').innerHTML = html;
+  }
+
+  /*// Función para validar la entrada del usuario
+  function validarEntrada(input, fila, col) {
+    let valor = input.value;
+    if (!/^[1-9]$/.test(valor)) {
+      input.value = ''; // Limpiar si el valor no es un número entre 1 y 9
+    }
+  }
+
+  // Función para verificar si el Sudoku está resuelto correctamente
+  function verificarSudoku() {
+    const inputs = document.querySelectorAll('input');
+    let tableroUsuario = [];
+    let esValido = true;
+
+    // Llenar el tablero con los valores del usuario
+    for (let i = 0; i < 9; i++) {
+      let fila = [];
+      for (let j = 0; j < 9; j++) {
+        let valor = inputs[i * 9 + j].value;
+        fila.push(valor === '' ? 0 : parseInt(valor));
+      }
+      tableroUsuario.push(fila);
+    }
+
+    // Verificar si el Sudoku es válido
+    for (let fila = 0; fila < 9; fila++) {
+      for (let col = 0; col < 9; col++) {
+        let num = tableroUsuario[fila][col];
+        if (num !== 0 && !esSeguro(tableroUsuario, fila, col, num)) {
+          esValido = false;
+          break;
+        }
+      }
+    }
+
+    if (esValido) {
+      alert("¡Sudoku resuelto correctamente!");
+    } else {
+      alert("El Sudoku tiene errores.");
+    }
+  }
+
+  // Función para verificar si es seguro colocar un número en la posición (row, col)
+  function esSeguro(tablero, fila, col, num) {
+    // Verificar fila
+    for (let x = 0; x < 9; x++) {
+      if (tablero[fila][x] === num) return false;
+    }
+
+    // Verificar columna
+    for (let x = 0; x < 9; x++) {
+      if (tablero[x][col] === num) return false;
+    }
+
+    // Verificar la subcuadrícula 3x3
+    let startRow = Math.floor(fila / 3) * 3;
+    let startCol = Math.floor(col / 3) * 3;
+    for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 3; j++) {
+        if (tablero[startRow + i][startCol + j] === num) return false;
+      }
+    }
+
+    return true;
+  }*/
+
+  // Mostrar el tablero al cargar la página
+  mostrarSudoku(tableroInicial);
+</script>
+</body>
+</html>
