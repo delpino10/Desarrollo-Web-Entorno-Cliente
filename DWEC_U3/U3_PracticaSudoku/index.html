@@ -1,50 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador de Sudoku</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            margin: 20px auto;
-        }
-        td {
-            width: 50px;
-            height: 50px;
-            text-align: center;
-            border: 1px solid #000;
-        }
-        input {
-            width: 40px;
-            height: 40px;
-            text-align: center;
-            font-size: 20px;
-            border: none;
-            background-color: #f0f0f0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generar Sudoku Completo</title>
+  <style>
+
+  </style>
 </head>
 <body>
-<h1 style="text-align:center;">Generador de Sudoku</h1>
-<table id="sudoku-board"></table>
-<div style="text-align:center;">
-    <button onclick="generarSudoku()">Generar Sudoku</button>
-</div>
+<h1>Generar Sudoku Completo</h1>
+<table id="tablaSudoku"></table>
+<button id="generarSudoku">Generar Nuevo Sudoku</button>
+<button id="generarNuevoSudoku">Generar Otro Sudoku a partir del Anterior</button>
 
-<script>
-    const N = 9; // Dimensión del tablero de Sudoku
-    let sudoku = [];
-
-    // Crear el tablero de Sudoku vacío
-    for (let i = 0; i < N; i++) {
-        sudoku[i] = [];
-        for (let j = 0; j < N; j++) {
-            sudoku[i][j] = 0; // Inicializar cada celda con 0
-        }
-    }
-
-
-</script>
+<script src="js/script.js"></script>
 </body>
 </html>
+
