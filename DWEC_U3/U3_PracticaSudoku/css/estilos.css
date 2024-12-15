@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+    flex-direction: column;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#tablaSudoku {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+td {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    background-color: #fff;
+}
+
+td:nth-child(3n) {
+    border-right: 2px solid #000;
+}
+
+tr:nth-child(3n) td {
+    border-bottom: 2px solid #000;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004085;
+}
