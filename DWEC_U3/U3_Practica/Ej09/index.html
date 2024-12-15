@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Ciudad por CP</title>
+</head>
+<body>
+    <h2>Buscar Ciudad por Código Postal (CP)</h2>
+    
+    <!-- Campo de búsqueda -->
+    <input type="text" id="buscar" placeholder="Escribe el nombre de la ciudad o CP">
+    <button onclick="buscarCiudad()">Buscar</button>
+    
+    <p id="resultado"></p>
+
+    <script>
+        // Array de ciudades y CPs
+        const ciudadesCP = [
+            "28924; Estepona",
+            "28001; Madrid",
+            "08001; Barcelona",
+            "29001; Málaga",
+            "29700; Vélez-Málaga",
+            "08002; Barcelona",
+            "28935; Alcorcón",
+            "41001; Sevilla",
+            // Puedes agregar más elementos aquí
+        ];
+
+        // Función de búsqueda
+        function buscarCiudad() {
+            // Obtener el valor ingresado en el campo de búsqueda
+            let busqueda = document.getElementById("buscar").value.toLowerCase();
+            let resultado = document.getElementById("resultado");
+            
+            // Filtrar el array según la búsqueda (no importa mayúsculas/minúsculas)
+            let coincidencias = ciudadesCP.filter(item => item.toLowerCase().includes(busqueda));
+            
+            // Mostrar el resultado
+            if (coincidencias.length > 0) {
+                resultado.innerHTML = "<b>Resultados encontrados:</b><br>";
+                coincidencias.forEach(coincidencia => {
+                    let [cp, ciudad] = coincidencia.split(';');
+                    resultado.innerHTML += `CP: <b>${cp.trim()}</b> - Ciudad: <b>${ciudad.trim()}</b><br>`;
+                });
+            } else {
+                resultado.innerHTML = "No se encontró ninguna ciudad con ese nombre o CP.";
+            }
+        }
+    </script>
+</body>
+</html>

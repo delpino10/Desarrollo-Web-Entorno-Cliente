@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cookies</title>
+</head>
+<body>
+    <h2>Crear Cookies en el Navegador</h2>
+    
+    <button onclick="crearCookies()">Crear Cookies</button>
+    <button onclick="verCookies()">Ver Cookies</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        // Función para crear cookies
+        function crearCookies() {
+            // Establecer la primera cookie con nombre 'usuario' y valor 'Juan'
+            document.cookie = "usuario=Juan;"
+
+            // Establecer la segunda cookie con nombre 'tema' y valor 'oscuro'
+            document.cookie = "apellido=Puente;" 
+
+            alert("Cookies creadas: 'usuario' y 'apellido'");
+        }
+
+        // Función para ver las cookies almacenadas
+        function verCookies() {
+            let cookies = document.cookie;
+            let resultado = document.getElementById("resultado");
+
+            if (cookies) {
+                resultado.innerHTML = "Cookies almacenadas: <br>" + cookies;
+            } else {
+                resultado.innerHTML = "No hay cookies almacenadas.";
+            }
+        }
+    </script>
+
+</body>
+</html>

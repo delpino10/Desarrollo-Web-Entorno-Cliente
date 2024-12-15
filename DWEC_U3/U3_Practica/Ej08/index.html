@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej08</title>
+</head>
+<body>
+    <script>
+
+        var perrillos = [ "Rocket", "Flash", "Bella", "Slugger"];
+        // Muestra los nombres de los perros como una cadena
+        console.log(perrillos.toString());
+        var ciudades = 'Manchester, London, Liverpool, Birmingham, Leeds, Carlisle'; 
+        // Divide la cadena ciudades en un array de ciudades
+        var arrayCiudades = ciudades.split(',');
+        // Eliminamos la variable perrillos
+        Console.log(perrillos.toString());
+
+        // le pasamos dos arrays
+        function aniadirCiudades(array, array2){
+            // recorremos el primer array
+            for (let i = 0; i < array.length; i++) {
+            // Añadimos los elementos del primer array en el segundo
+            array2.push(array[i]);
+            }
+        }
+        // Llamamos a la función
+        aniadirCiudades(arrayCiudades, perrillos);
+        // La imprimimos por consola
+        console.log(perrillos);
+    </script>
+</body>
+</html>
