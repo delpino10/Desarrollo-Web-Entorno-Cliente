@@ -11,6 +11,8 @@
     <div id="ej1">
         <h1>Ejercicio 1</h1>
         <h3>Cambia el tamaño del párrafo</h3>
+        <label for="numParrafo">Inserta el número de párrafo</label>
+        <input type="text" name="numParrafo" id="numParrafo">
         <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum officia repudiandae temporibus. Ad
             amet culpa doloremque earum eius ipsa labore nihil nostrum, quibusdam quidem quo ratione sapiente sint,
             veniam vero.</p>
@@ -20,9 +22,22 @@
         <p id="p3">At beatae, consequuntur culpa dicta distinctio eaque est exercitationem explicabo facilis illum iste
             itaque iure iusto magnam minus numquam possimus quasi qui quo ratione repellat temporibus tenetur ullam ut
             voluptate!</p>
-        <button id="btn_p">Cambiar tamaño párrafo</button>
+        <input type="button" value="Aumenta el párrafo" id="btn" onclick="cambiaParrafo()">
     </div>
+<hr>
+<!--Ejercicio 2-->
+    <div id="ej2">
+        <h1>Ejercicio 2</h1>
+        <h3>Validaciones</h3>
+        <form action="" method="get">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre">
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="nombre" id="apellido">
 
+            <input type="button" value="Validar">
+        </form>
+    </div>
 <script src="js/script.js"></script>
 </body>
 </html>
