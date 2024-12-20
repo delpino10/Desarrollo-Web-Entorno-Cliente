@@ -12,7 +12,7 @@
     <div id="ej1">
         <div class="containerEj1">
             <h1>Ejercicio 1</h1>
-            <h3>Cambia el tamaño del párrafo</h3>
+            <h3>Cambia el tamaño de un párrafo</h3>
             <label for="numParrafo"></label>
             <input type="text" name="numParrafo" id="numParrafo" placeholder="número de párrafo">
             <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum officia repudiandae temporibus. Ad
@@ -29,9 +29,9 @@
         </div>
     </div>
 
-<!--Ejercicio 2-->
+<!--Ejercicio 2 y 3-->
     <div id="ej2">
-            <h1>Ejercicio 2</h1>
+            <h1>Ejercicio 2 y 3</h1>
         <div class="container">
             <form action="" method="get" class="form-ej2">
             <h3>Formulario</h3>
@@ -45,13 +45,27 @@
                     <i class='bx bx-user'></i>
                     <span id="errorApellido"></span>
                 </div>
+                <div class="input-box">
+                    <input type="email" name="email" id="email" placeholder="Email"
+                    required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    <i class='bx bx-envelope'></i>
+                    <span id="errorEmail"></span>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="telefono" id="telefono" placeholder="Teléfono"
+                    required >
+                    <i class='bx bx-phone' ></i>
+                    <span id="errorTelefono"></span>
+                </div>
 
-                <input type="button" value="Validar" id="btn-submit">
+                <input type="submit" value="Enviar" id="btn-submit">
             </form>
         </div>
     </div>
-<hr>
+
 <!--Ejercicio 3-->
+
+
 
 <script src="js/script.js"></script>
 </body>
