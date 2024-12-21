@@ -8,6 +8,7 @@ function cambiaParrafo(){
         id.style.fontWeight = 'bold'
         id.style.fontSize='20px';
         id.style.border='2px solid rgb(0, 183, 235)';
+        id.style.backdropFilter='blur(40px)'
     })
 }
 
@@ -97,5 +98,19 @@ formulario.addEventListener('submit', function (event){
         errorEmail.textContent = "";
     }
 });
+
+var str = "Aprende javaScript de 10 en Síntesis";
+
+// Busca la posición de la primera aparición de 'S' o 't' (sin importar mayúsculas o minúsculas)
+var m = str.search(/[S|t]/i);
+console.log(m); // Esperaría que el resultado sea 14, porque 'S' de "Síntesis" es la primera coincidencia.
+
+// Busca la posición de la primera aparición de cualquier dígito del 0 al 9
+var n = str.search(/[0-9]/i);
+console.log(n); // Esperaría que el resultado sea 19, ya que '1' es el primer número en la cadena.
+
+// Busca la posición de una secuencia de uno o más ceros consecutivos
+var a = str.search(/0+/i);
+console.log(a); // Esperaría que el resultado sea -1, porque no hay ninguna secuencia de ceros en la cadena.
 
 
