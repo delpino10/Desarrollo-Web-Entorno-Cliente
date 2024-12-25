@@ -6,6 +6,7 @@ let contadorLeve = 0;
 let contadorGrave = 0;
 let contadorMedio = 0;
 let resultado = document.getElementById('resultado');
+let emoji = document.querySelector('.grave')
 
     event.preventDefault();
     let p1Seleccionada = document.querySelector('input[name = "pregunta1"]:checked');

@@ -183,3 +183,105 @@ body{
 #btn-submit:hover{
     background: rgba(255, 165, 0, 1);
 }
+
+/*Ejercicio 8*/
+#ej8{
+    height: 500px;
+    width: 100%;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ej8 .container-ej8{
+    color: white;
+}
+
+/*Ejercicio 9.1*/
+.apartado-ej91{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ddd;
+}
+
+.container-ej91{
+    text-align: center;
+    height: 500px;
+    width: 500px;
+    padding: 10px;
+    margin: 20px auto;
+    border: 2px solid;
+    border-radius: 10px;
+    background: linear-gradient(0deg,
+    rgba(218, 241, 222,.5),
+    rgba(35, 83, 71, .5)),
+    rgba(5, 31, 32, .5);
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    flex-direction: column;
+}
+
+.valores{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type=number]{
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    background: rgba(218, 241, 222, .5);
+    border: 2px solid rgba(218, 241, 222, 1);
+    border-radius: 20px;
+}
+
+.botones{
+    display: flex;
+    gap: 10px;
+}
+
+.boton{
+    background: #000;
+    border-radius: 10px;
+    background: rgba(218, 241, 222, .2);
+    border: 2px solid rgba(218, 241, 222, 1);
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

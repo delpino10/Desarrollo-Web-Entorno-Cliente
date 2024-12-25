@@ -116,6 +116,29 @@ input:checked + label{
     font-size: 30px;
 }
 
+.grave{
+    display: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: red;
+}
+
+.medio{
+    display: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: orange;
+}
+.leve{
+    display: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: green;
+}
+
 
 
 

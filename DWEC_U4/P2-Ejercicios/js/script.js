@@ -41,6 +41,7 @@ function validarCampo(campo){
 
 btn_submit.addEventListener('click', function (event){
 
+    event.preventDefault();
     let nombre = document.getElementById('nombre').value;
     const nombreValido = validarCampo(nombre);
     let input1 = document.getElementById('nombre')
@@ -99,18 +100,70 @@ formulario.addEventListener('submit', function (event){
     }
 });
 
-var str = "Aprende javaScript de 10 en Síntesis";
 
-// Busca la posición de la primera aparición de 'S' o 't' (sin importar mayúsculas o minúsculas)
-var m = str.search(/[S|t]/i);
-console.log(m); // Esperaría que el resultado sea 14, porque 'S' de "Síntesis" es la primera coincidencia.
 
-// Busca la posición de la primera aparición de cualquier dígito del 0 al 9
-var n = str.search(/[0-9]/i);
-console.log(n); // Esperaría que el resultado sea 19, ya que '1' es el primer número en la cadena.
+// Ejercicio 8
 
-// Busca la posición de una secuencia de uno o más ceros consecutivos
-var a = str.search(/0+/i);
-console.log(a); // Esperaría que el resultado sea -1, porque no hay ninguna secuencia de ceros en la cadena.
+let parrafo = document.getElementById('p')
+
+parrafo.addEventListener('mouseover', () => {
+    parrafo.innerHTML = parrafo.textContent.toUpperCase();
+});
+
+
+
+
+// Ejercicio 9
+
+// Boton para abrir una ventana nueva
+let btn_open = document.getElementById('btn-abrir')
+// Botón para redimensionar la ventana abierta
+let btn_resizeTo = document.getElementById('btn-resizeTo')
+// Botón para desplazar la ventana abierta
+let btn_resizeBy = document.getElementById('btn-resizeBy')
+// Botón para cerrar la ventana abierta
+let btn_cerrar = document.getElementById('btn-cerrar')
+// Iniciamos la ventana que vamos a abrir
+let ventana;
+
+// Evento que tras pulsar un botón para abrir una ventana según los valores introducidos por el usuario
+btn_open.addEventListener('click', () => {
+    // Valor Y
+    let alto = parseInt(document.getElementById('alto').value)
+    // Valor X
+    let ancho = parseInt(document.getElementById('ancho').value)
+    // Ejecutamos para abrir una ventana nueva según los valores recopilados
+    ventana = window.open('','',"width="+ancho+"px, height="+alto+"px");
+    // Mostramos esos valores en el Html de la ventana
+    ventana.document.write(`Altura: ${ventana.outerHeight}px | Ancho: ${ventana.outerWidth}px`);
+})
+// Evento que tras pulsar un botón para redimensionar la ventana
+// recién abierta según los valores introducidos por el usuario
+btn_resizeTo.addEventListener('click',  () => {
+    let alto = document.getElementById('alto').value
+    let ancho = document.getElementById('ancho').value
+    // Redimensinar las página
+    ventana.resizeTo(ancho, alto)
+    // Mostramos la nuevas medidas de la página
+    ventana.document.write(`Altura: ${ventana.outerHeight}px | Ancho: ${ventana.outerWidth}px`);
+
+})
+// Evento para desplazar la ventanha según los valores insertados por el usuario
+btn_resizeBy.addEventListener('click',  () => {
+    let alto = document.getElementById('alto').value
+    let ancho = document.getElementById('ancho').value
+    // Ejecutamos el desplazamiento
+    ventana.resizeBy(ancho, alto)
+});
+
+// Evento para cerrar la venta tras pulsar este botón
+btn_cerrar.addEventListener('click', () =>{
+    ventana.close();
+})
+
+
+
+
+
 
 
