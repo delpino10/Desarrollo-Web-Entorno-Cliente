@@ -84,6 +84,21 @@ body{
     background: deepskyblue;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*Ejercicio 2*/
 
 #ej2{
@@ -198,26 +213,41 @@ body{
     color: white;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 /*Ejercicio 9.1*/
 .apartado-ej91{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #ddd;
+    background: #04132a;
 }
 
 .container-ej91{
     text-align: center;
+    color: white;
     height: 500px;
     width: 500px;
     padding: 10px;
-    margin: 20px auto;
+    margin: 50px auto;
     border: 2px solid;
-    border-radius: 10px;
+    border-radius: 25px;
     background: linear-gradient(0deg,
-    rgba(218, 241, 222,.5),
-    rgba(35, 83, 71, .5)),
-    rgba(5, 31, 32, .5);
+    rgba(237, 117, 97),
+    rgba(118, 54, 109),
+    rgba(19, 39, 90),
+    rgba(5, 31, 32));
+    /*background:  rgba(35, 83, 71, .5);*/
     display: flex;
     justify-content: space-around;
     align-items:center;
@@ -247,11 +277,52 @@ input[type=number]{
 
 .boton{
     background: #000;
-    border-radius: 10px;
+    border-radius: 20px;
     background: rgba(218, 241, 222, .2);
     border: 2px solid rgba(218, 241, 222, 1);
     padding: 5px;
     cursor: pointer;
+}
+
+.boton:hover{
+    color: white;
+}
+
+
+
+
+
+
+
+/*Ejercicio 10*/
+.apartado10{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #170115;
+}
+
+.container-ej10{
+    text-align: center;
+    color: white;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn-ej10{
+    padding: 5px 10px;
+}
+
+#reset-button{
+    padding: 5px 10px;
+}
+
+#btn-ej10-remove{
+    padding: 5px 10px;
 }
 
 
