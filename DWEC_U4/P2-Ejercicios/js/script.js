@@ -28,7 +28,8 @@ function validarCampo(campo){
     // El campo no puede tener cero caracteres
     if (campo.length === 0){
         return "El campo nombre no puede estar vacío"
-    // El campo no puede incluir caracteres especificados fuera del regex
+    // El campo no puede incluir caracteres especificados
+    // fuera de la expresión regular
     }else if (!regex.test(campo)){
         return "Caracteres no admitidos"
     }else{
@@ -48,11 +49,11 @@ function validarCampo(campo){
     }
 }
 
-// Envía los datos al servidor  tras hacer 'click'
+// Envía los datos al servidor tras hacer 'click'
 btn_submit.addEventListener('click', function (event){
-    // PReviene de enviar los datos al servidor sin validar
+    // Previene de enviar los datos al servidor sin validar
     event.preventDefault();
-    // Acedemos al valor del campo nombre
+    // Accedemos al valor del campo nombre
     let nombre = document.getElementById('nombre').value;
     // Validamos ese valor
     const nombreValido = validarCampo(nombre);
@@ -71,6 +72,7 @@ btn_submit.addEventListener('click', function (event){
         }else {
             // si no hay error, se deja vacío.
             errorNombre.textContent = "";
+            // El borde vuelve al color por defecto
             input1.style.border = '2px solid rgba(255, 165, 0,.3)'
         }
 // Se hace lo mismo con el campo apellido
@@ -87,7 +89,7 @@ btn_submit.addEventListener('click', function (event){
             errorApellido.textContent="";
             input2.style.border = '2px solid rgba(255, 165, 0,.3)'
     }
-    // se hace los mismo con el campo teléfono
+    // se hace lo mismo con el campo teléfono
     let telefonoValue = document.getElementById('telefono').value;
     const telefValido = validarTelefono(telefonoValue);
     let telef = document.getElementById('telefono')
@@ -105,7 +107,7 @@ btn_submit.addEventListener('click', function (event){
 });
 
 // Ejercicio 3 (Email) y 4 (Teléfono)
-// Utilizamos la validaciones incluidas en el navegador
+// Utilizamos las validaciones incluidas en el navegador
 // Accedemos al formulario completo
 const formulario = document.querySelector('form');
 // Cuando vayamos a enviar el formulario al servidor
