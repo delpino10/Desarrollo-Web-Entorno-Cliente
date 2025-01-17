@@ -176,7 +176,7 @@ btn_resizeTo.addEventListener('click',  () => {
     ventana.document.write(`Altura: ${ventana.outerHeight}px | Ancho: ${ventana.outerWidth}px`);
 
 })
-// Evento para desplazar la ventanha según los valores insertados por el usuario
+// Evento para desplazar la ventana según los valores insertados por el usuario
 btn_resizeBy.addEventListener('click',  () => {
     let alto = document.getElementById('alto').value
     let ancho = document.getElementById('ancho').value

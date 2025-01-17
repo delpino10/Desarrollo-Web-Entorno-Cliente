@@ -75,19 +75,5 @@ let resultado = document.getElementById('resultado');
         resultado.style.fontWeight='700'
     }
 
-
-    /*console.log('pregunta 1:', p1)
-    console.log('pregunta 2:', p2)
-    console.log('pregunta 3:', p3)
-    console.log('pregunta 4:', p4)
-    console.log('pregunta 5:', p5)
-    console.log('pregunta 6:', p6)
-    console.log('pregunta 7:', p7)
-    console.log('cont Leve:', contadorLeve)
-    console.log('cont Medio:', contadorMedio)
-    console.log('cont Grave:', contadorGrave)*/
-
-
-
 })
 
