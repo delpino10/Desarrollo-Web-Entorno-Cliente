@@ -244,7 +244,7 @@ btn_remove.addEventListener('click', () => {
                 btn_ej10.removeEventListener('mouseout', eventoMouseOut)
             }
             // Ventana pop-up que muestra que evento se ha eliminado
-            alert(`${evento} ha sido eliminado`)
+            alert(`El evento ${evento} ha sido eliminado`)
 
 
     }else {
