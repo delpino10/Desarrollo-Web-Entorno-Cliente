@@ -1,0 +1,58 @@
+{
+  "ciudades": [
+    {
+      "nombre": "Ciudad de México",
+      "pais": "México",
+      "poblacion": 9209944,
+      "monumento": "Ángel de la Independencia"
+    },
+    {
+      "nombre": "Nueva York",
+      "pais": "Estados Unidos",
+      "poblacion": 8419600,
+      "monumento": "Estatua de la Libertad"
+    },
+    {
+      "nombre": "Tokio",
+      "pais": "Japón",
+      "poblacion": 13929286,
+      "monumento": "Templo Senso-ji"
+    },
+    {
+      "nombre": "Londres",
+      "pais": "Reino Unido",
+      "poblacion": 8982000,
+      "monumento": "Big Ben"
+    },
+    {
+      "nombre": "París",
+      "pais": "Francia",
+      "poblacion": 2148327,
+      "monumento": "Torre Eiffel"
+    },
+    {
+      "nombre": "Sídney",
+      "pais": "Australia",
+      "poblacion": 5312163,
+      "monumento": "Ópera de Sídney"
+    },
+    {
+      "nombre": "Buenos Aires",
+      "pais": "Argentina",
+      "poblacion": 2890151,
+      "monumento": "Obelisco"
+    },
+    {
+      "nombre": "Madrid",
+      "pais": "España",
+      "poblacion": 3223334,
+      "monumento": "Puerta del Sol"
+    },
+    {
+      "nombre": "Medellín",
+      "pais": "Colombia",
+      "poblacion": 2500000,
+      "monumento": "Pueblito Paisa"
+    }
+  ]
+}
