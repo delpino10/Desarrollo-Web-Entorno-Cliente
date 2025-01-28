@@ -1,4 +1,5 @@
 // Usar XmlHttpRequest y Fetch
+/*
 const valorInput = document.getElementById('ciudadInput')
 
 valorInput.addEventListener('input',
@@ -15,4 +16,4 @@ valorInput.addEventListener('input',
 
         }
 
-    })
+    })*/
