@@ -1,86 +1,91 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscar Ciudades y Monumentos</title>
-    <style>
-        #suggestions {
-            border: 1px solid #ccc;
-            max-height: 200px;
-            overflow-y: auto;
-            display: none;
-            position: absolute;
-            background-color: white;
-            width: 300px;
-            z-index: 100;
-        }
-        .suggestion-item {
-            padding: 8px;
-            cursor: pointer;
-        }
-        .suggestion-item:hover {
-            background-color: #f1f1f1;
-        }
-        .monuments-list {
-            padding-left: 20px;
-            color: #555;
-        }
-    </style>
-</head>
-<body>
-
-<h2>Buscar Ciudad y Monumentos</h2>
-<label for="city">Introduce una ciudad:</label>
-<input type="text" id="city" onkeyup="showSuggestions(this.value)">
-
-<div id="suggestions"></div>
-
-<script>
-    function showSuggestions(query) {
-        if (query.length == 0) {
-            document.getElementById('suggestions').style.display = 'none';
-            return;
-        }
-
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', 'getCitiesAndMonuments.php?q=' + query, true);
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                const suggestions = JSON.parse(xhr.responseText);
-                let suggestionsHTML = '';
-
-                if (suggestions.length > 0) {
-                    suggestions.forEach(function(cityData) {
-                        let monumentsHTML = '';
-                        cityData.monuments.forEach(function(monument) {
-                            monumentsHTML += `<li>${monument}</li>`;
-                        });
-
-                        suggestionsHTML += `
-                                <div class="suggestion-item">
-                                    <strong>${cityData.city}</strong>
-                                    <ul class="monuments-list">${monumentsHTML}</ul>
-                                </div>
-                            `;
-                    });
-                    document.getElementById('suggestions').innerHTML = suggestionsHTML;
-                    document.getElementById('suggestions').style.display = 'block';
-                } else {
-                    document.getElementById('suggestions').style.display = 'none';
-                }
-            }
-        };
-        xhr.send();
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sugerencias de ciudades</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
     }
 
-    // Cerrar las sugerencias cuando se hace clic fuera
-    document.addEventListener('click', function(e) {
-        if (!document.getElementById('suggestions').contains(e.target) && e.target.id !== 'city') {
-            document.getElementById('suggestions').style.display = 'none';
-        }
-    });
-</script>
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #555;
+      text-align: center;
+    }
 
+    .contenedor {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    #ciudad {
+      width: 100%;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 25px;
+      outline: none;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+
+    #ciudad:focus {
+      border-color: #4d90fe;
+    }
+
+    #sugerencias {
+      margin-top: 5px;
+      max-height: 200px;
+      width: 100%;
+      position: absolute;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+    }
+
+    #sugerencias div {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #sugerencias div:hover {
+      background-color: #f1f1f1;
+    }
+
+    .suggestion-item:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+<div class="contenedor">
+    <h1>Buscar Ciudad</h1>
+    <label for="ciudad"></label>
+    <input
+            type="text"
+            id="ciudad"
+            placeholder="Introduce el nombre de la ciudad:"
+            onkeyup="buscarSugerencias()"
+            autocomplete="off">
+    <div id="sugerencias"></div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
