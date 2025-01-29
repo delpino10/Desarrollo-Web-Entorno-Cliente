@@ -75,6 +75,7 @@
 </head>
 <body>
 <div class="contenedor">
+  <div class="contenedor-busqueda">
     <h1>Buscar Ciudad</h1>
     <label for="ciudad"></label>
     <input
@@ -84,7 +85,16 @@
             onkeyup="buscarSugerencias()"
             autocomplete="off">
     <div id="sugerencias"></div>
+
+    <!-- Área para mostrar los monumentos -->
+    <div id="monumentos">
+      <h3>Monumentos destacados:</h3>
+      <ul id="lista-monumentos"></ul>
+    </div>
+  </div>
+
 </div>
+
 
 <script src="script.js"></script>
 </body>

@@ -12,7 +12,7 @@ function buscarSugerencias() {
         .then(datos => {
             const ciudades = datos.ciudades;
             const sugerencias = ciudades.filter(ciudad =>
-                ciudad.toLowerCase()
+                ciudad.nombre.toLowerCase()
                 .startsWith(input.toLowerCase()));
             mostrarSugerencias(sugerencias);
         })
@@ -23,13 +23,14 @@ function buscarSugerencias() {
 function mostrarSugerencias(sugerencias) {
     const contenedorSugerencias = document.getElementById('sugerencias');
     contenedorSugerencias.innerHTML = '';  // Limpiamos el contenedor antes de agregar nuevas sugerencias
+    // Si no hay coincidencias
     if (sugerencias.length === 0) {
         contenedorSugerencias.innerHTML = '<div>No se encontraron coincidencias</div>';
         return;
     }
     sugerencias.forEach(ciudad => {
         const div = document.createElement('div');
-        div.textContent = ciudad;
+        div.textContent = ciudad.nombre;
         div.onclick = () => seleccionarCiudad(ciudad); // Cuando se selecciona una ciudad
         contenedorSugerencias.appendChild(div);
     });
@@ -39,4 +40,8 @@ function mostrarSugerencias(sugerencias) {
 function seleccionarCiudad(ciudad) {
     document.getElementById('ciudad').value = ciudad;
     document.getElementById('sugerencias').innerHTML = ''; // Ocultamos las sugerencias
+}
+
+function mostrarMonumentos(sugerencia){
+
 }

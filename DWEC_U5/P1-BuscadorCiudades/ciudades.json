@@ -1,24 +1,64 @@
 {
   "ciudades": [
-    "Madrid",
-    "Barcelona",
-    "Valencia",
-    "Sevilla",
-    "Zaragoza",
-    "Málaga",
-    "Murcia",
-    "Palma",
-    "Las Palmas",
-    "Bilbao",
-    "Alicante",
-    "Córdoba",
-    "Valladolid",
-    "Vigo",
-    "Gijón",
-    "Lugo",
-    "Huelva",
-    "Santiago de Compostela",
-    "Oviedo",
-    "Tarragona"
+    {
+      "nombre": "Madrid",
+      "monumentos": [
+        "Palacio Real",
+        "Puerta del Sol",
+        "Plaza Mayor",
+        "Museo del Prado",
+        "Templo de Debod"
+      ]
+    },
+    {
+      "nombre": "Barcelona",
+      "monumentos": [
+        "Sagrada Familia",
+        "Parque Güell",
+        "Casa Batlló",
+        "La Rambla",
+        "Museo Picasso"
+      ]
+    },
+    {
+      "nombre": "Valencia",
+      "monumentos": [
+        "La Ciudad de las Artes y las Ciencias",
+        "La Lonja de la Seda",
+        "Plaza de la Virgen",
+        "Oceanográfico de Valencia",
+        "Torres de Serranos"
+      ]
+    },
+    {
+      "nombre": "Sevilla",
+      "monumentos": [
+        "La Giralda",
+        "Alcázar de Sevilla",
+        "Plaza de España",
+        "Catedral de Sevilla",
+        "Metropol Parasol"
+      ]
+    },
+    {
+      "nombre": "Zaragoza",
+      "monumentos": [
+        "Basílica del Pilar",
+        "La Seo",
+        "Palacio de la Aljafería",
+        "Plaza del Pilar",
+        "Puente de Piedra"
+      ]
+    },
+    {
+      "nombre": "Málaga",
+      "monumentos": [
+        "Alcazaba de Málaga",
+        "Castillo de Gibralfaro",
+        "Catedral de Málaga",
+        "Teatro Romano",
+        "Museo Picasso"
+      ]
+    }
   ]
 }
